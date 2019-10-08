@@ -11,6 +11,11 @@
     <title>SignUp</title>
 
     <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 200;
+        }
+        
         h1 {
             font-family: 'Ubuntu', sans-serif;
             font-weight: 300;
@@ -25,6 +30,7 @@
         
         .signinform {
             border: thin #c4c4c4 solid;
+            border-radius: 1% 1% 1% 1%;
         }
         
         a {
@@ -35,6 +41,28 @@
             text-decoration: none;
             color: #000;
         }
+
+        
+        .btn-success {
+            background-color: #0ABAB5;
+            border: thin #0ABAB5 solid;
+        }
+        
+        .btn-success:hover {
+            background-color: #0ABAB5;
+            border: thin #0ABAB5 solid;
+        }
+
+
+        form#loginform button{
+            background:#0ABAB5;
+            border:0px
+        }
+
+         div.floatright a, div.floatright p{
+             font-size: 16px;
+         }
+
     </style>
 </head>
 
@@ -54,14 +82,15 @@
             </div>
             <div class="col-md-5 offset-md-1 signinform mt-5 pl-5 pr-5 pt-4 pb-4">
                 <h4 class="text-center">Sign In</h4>
-                <form>
+                <form id="loginform">
                     <div class="form-group">
                         <label for="my-email">Email Address</label>
-                        <input id="my-email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
+                        <input id="email" class="form-control" type="email" name="" placeholder="eg. johndoe@example.com">
                     </div>
                     <div class="form-group">
                         <label for="my-password">Password</label>
-                        <input id="my-password" class="form-control" type="email" name="" placeholder="">
+                        <input id="password" class="form-control" type="password" name="" placeholder=""> 
+                        <span id="pmessage"></span>
                     </div>
                     <div class="clearfix">
                         <div class="float-left">
@@ -88,6 +117,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
